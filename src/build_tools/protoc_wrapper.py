@@ -80,7 +80,7 @@ def main():
 
   protoc_path = opts.protoc_command
   if opts.protoc_dir:
-    protoc_path = os.path.join(os.path.abspath(opts.protoc_dir), protoc_path)
+    protoc_path = os.path.join(os.path.abspath(opts.protoc_dir.rstrip('\"')), protoc_path)
 
   # The path of proto file should be transformed as a relative path from
   # the project root so that correct relative paths should be embedded into

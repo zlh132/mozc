@@ -36,6 +36,9 @@ __author__ = "keni"
 import optparse
 import sys
 
+import sys
+sys.path.append("..")
+
 from build_tools import code_generator_util
 
 

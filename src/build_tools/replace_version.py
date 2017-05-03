@@ -41,6 +41,10 @@ __author__ = "mukai"
 import logging
 import optparse
 
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+
 from build_tools import mozc_version
 
 

@@ -39,6 +39,8 @@ import optparse
 import os
 import struct
 import sys
+sys.path.append("..")
+sys.path.append("../..")
 
 from build_tools import code_generator_util
 

@@ -37,6 +37,10 @@ from collections import defaultdict
 import logging
 import re
 
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+
 from build_tools import code_generator_util
 
 
@@ -169,8 +173,8 @@ class UserPos(object):
                 feature.replace('<cform>', form))
 
             # Known error items.
-            # 動詞,自立,*,*,五段動詞,体言接続特殊２,*
-            # 形容詞,自立,*,*,形容詞・アウオ段,文語基本形,*
+            # 動詞,自立,*,*,五段動詞,体言接続特殊�?*
+            # 形容�?自立,*,*,形容詞・アウオ段,文語基本�?*
             if pos_id is not None:
               conjugation_list.append((value_suffix, key_suffix, pos_id))
 

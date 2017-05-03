@@ -34,6 +34,10 @@ import codecs
 import optparse
 import sys
 
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+
 from build_tools import code_generator_util
 from build_tools import serialized_string_array_builder
 

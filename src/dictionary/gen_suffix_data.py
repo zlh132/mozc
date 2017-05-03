@@ -33,6 +33,9 @@ __author__ = "taku"
 import optparse
 import struct
 
+import sys
+sys.path.append("../..")
+
 from build_tools import serialized_string_array_builder
 
 

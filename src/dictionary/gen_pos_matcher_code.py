@@ -92,7 +92,10 @@ __author__ = "taku"
 import optparse
 import re
 import struct
+
 import sys
+sys.path.append("..")
+sys.path.append("../..")
 
 from dictionary import pos_util
 

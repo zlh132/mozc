@@ -79,11 +79,27 @@ int main(int argc, char **argv) {
     if (mozc::Util::StartsWith(argv[i], "--")) {
       continue;
     }
+
+	int nLen = strlen(argv[i]);
+	char *pArgv = (char*)malloc(nLen + 1);
+	strcpy(pArgv, argv[i]);
+	for (int j = 0; j < nLen - 1; ++j)
+	{
+		if (pArgv[j] == ':')
+		{
+			if (pArgv[j+1] != '\\')
+			{
+				pArgv[j] = '|';
+			}
+		}
+	}
+
     std::vector<string> params;
-    mozc::Util::SplitStringUsing(argv[i], ":", &params);
+    mozc::Util::SplitStringUsing(pArgv, "|", &params);
     CHECK_EQ(3, params.size()) << "Unexpected arg[" << i << "] = " << argv[i];
     inputs.emplace_back(params[0], mozc::NumberUtil::SimpleAtoi(params[1]),
                         params[2]);
+	free(pArgv);
   }
 
   CHECK(!FLAGS_output.empty()) << "--output is required";

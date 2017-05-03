@@ -326,10 +326,7 @@
         'TreatWChar_tAsBuiltInType': 'false',  # /Zc:wchar_t-
         'WarningLevel': '3',                   # /W3
         'OmitFramePointers': 'false',          # /Oy-
-        'AdditionalOptions': [
-          '/Zc:strictStrings',
-          '/utf-8',
-        ],
+        'AdditionalOptions': '/Zc:strictStrings /utf-8',
       },
       'VCLinkerTool': {
         'AdditionalDependencies': [

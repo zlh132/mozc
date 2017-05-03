@@ -555,7 +555,8 @@ def GypMain(options, unused_args):
               '--expected=%s' % expected_gyp_module_path])
 
   # Set the generator name.
-  os.environ['GYP_GENERATORS'] = 'ninja'
+  #os.environ['GYP_GENERATORS'] = 'ninja'
+  os.environ['GYP_GENERATORS'] = 'msvs'
 
   # Get and show the list of .gyp file names.
   gyp_file_names = GetGypFileNames(options)

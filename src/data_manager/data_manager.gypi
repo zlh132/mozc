@@ -122,6 +122,7 @@
         'gen_separate_single_kanji_rewriter_data_for_<(dataset_tag)#host',
         'gen_separate_zero_query_data_for_<(dataset_tag)#host',
         'gen_separate_version_data_for_<(dataset_tag)#host',
+		'gen_separate_segmenter_data_for_<(dataset_tag)#host',
         'gen_typing_model_for_<(dataset_tag)#host',
       ],
       'actions': [

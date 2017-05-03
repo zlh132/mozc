@@ -30,6 +30,11 @@
 
 """Generate zero query data file for number suffixes."""
 
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+
+
 from collections import defaultdict
 import optparse
 

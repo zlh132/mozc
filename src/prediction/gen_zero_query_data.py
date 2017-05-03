@@ -34,8 +34,12 @@ from collections import defaultdict
 import logging
 import optparse
 import re
-import sys
 import unicodedata
+
+import sys
+sys.path.append("..")
+sys.path.append("../..")
+
 from build_tools import code_generator_util
 from prediction import gen_zero_query_util as util
 
